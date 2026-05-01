@@ -665,15 +665,33 @@
     }
 
     /* =============================================
-       TESTIMONIOS
+       TESTIMONIOS — CARRUSEL
     ============================================= */
     #testimonios { background: var(--blanco); }
     .testimonios-header { text-align: center; margin-bottom: 48px; }
 
-    .testimonios-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
+    .carrusel-wrapper {
+      position: relative;
+    }
+
+    .carrusel-track-outer {
+      overflow: hidden;
+      border-radius: var(--radius);
+      cursor: grab;
+      user-select: none;
+    }
+    .carrusel-track-outer:active { cursor: grabbing; }
+
+    .carrusel-track {
+      display: flex;
+      gap: 16px;
+      transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+
+    .carrusel-slide {
+      flex: 0 0 calc(50% - 8px);
+      min-width: 0;
     }
 
     .testimonio-img {
@@ -681,11 +699,71 @@
       border-radius: var(--radius-sm);
       object-fit: contain;
       background: var(--gris-suave);
-      transition: var(--transicion);
+      display: block;
+      pointer-events: none;
     }
-    .testimonio-img:hover {
-      transform: scale(1.02);
+
+    /* Flechas */
+    .carrusel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--negro);
+      color: var(--blanco);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      z-index: 10;
       box-shadow: var(--sombra);
+      transition: var(--transicion);
+      line-height: 1;
+    }
+    .carrusel-btn:hover {
+      background: var(--amarillo);
+      color: var(--negro);
+      transform: translateY(-50%) scale(1.08);
+    }
+    .carrusel-btn.prev { left: -16px; }
+    .carrusel-btn.next { right: -16px; }
+    .carrusel-btn:disabled { opacity: 0.3; pointer-events: none; }
+
+    /* Dots */
+    .carrusel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .carrusel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(24,24,24,0.18);
+      border: none;
+      cursor: pointer;
+      transition: var(--transicion);
+      padding: 0;
+    }
+    .carrusel-dot.active {
+      background: var(--amarillo);
+      width: 24px;
+      border-radius: 100px;
+    }
+
+    @media (min-width: 768px) {
+      .carrusel-slide { flex: 0 0 calc(33.333% - 11px); }
+      .carrusel-btn.prev { left: -22px; }
+      .carrusel-btn.next { right: -22px; }
+    }
+
+    @media (min-width: 1024px) {
+      .carrusel-slide { flex: 0 0 calc(25% - 12px); }
     }
 
     /* =============================================
@@ -1137,26 +1215,33 @@
         <p>Capturas reales. Nada editado.</p>
       </div>
 
-      <div class="testimonios-grid">
-        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509854/2_fpl2ri.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509855/4_xeo1ac.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509855/3_zrfskk.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-3" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509856/5_yo0h4n.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509858/7_a2yqw1.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509859/9_vxszev.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509861/11_a4b8sj.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-3" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509865/13_hgbv8n.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509866/14_gkhz75.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509867/16_mtfc7n.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509870/18_k2yuja.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-3" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509870/19_mql9b0.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509872/21_omnfow.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509871/20_d5tb3d.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509874/23_tzfxgj.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-3" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509873/22_mjeqlm.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509874/24_aey5ma.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509860/10_geviq3.png" alt="Testimonio cliente" />
-        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509854/1_kigem6.png" alt="Testimonio cliente" />
+      <div class="carrusel-wrapper reveal">
+        <button class="carrusel-btn prev" id="carrusel-prev" aria-label="Anterior">&#8592;</button>
+        <button class="carrusel-btn next" id="carrusel-next" aria-label="Siguiente">&#8594;</button>
+        <div class="carrusel-track-outer" id="carrusel-outer">
+          <div class="carrusel-track" id="carrusel-track">
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509854/2_fpl2ri.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509855/4_xeo1ac.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509855/3_zrfskk.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509856/5_yo0h4n.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509858/7_a2yqw1.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509859/9_vxszev.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509861/11_a4b8sj.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509865/13_hgbv8n.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509866/14_gkhz75.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509867/16_mtfc7n.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509870/18_k2yuja.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509870/19_mql9b0.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509872/21_omnfow.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509871/20_d5tb3d.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509874/23_tzfxgj.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509873/22_mjeqlm.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509874/24_aey5ma.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509860/10_geviq3.png" alt="Testimonio cliente" /></div>
+            <div class="carrusel-slide"><img class="testimonio-img" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509854/1_kigem6.png" alt="Testimonio cliente" /></div>
+          </div>
+        </div>
+        <div class="carrusel-dots" id="carrusel-dots"></div>
       </div>
     </div>
   </section>
@@ -1227,6 +1312,98 @@
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     });
+
+    // =============================================
+    // CARRUSEL DE TESTIMONIOS
+    // =============================================
+    (function () {
+      const track      = document.getElementById('carrusel-track');
+      const outer      = document.getElementById('carrusel-outer');
+      const btnPrev    = document.getElementById('carrusel-prev');
+      const btnNext    = document.getElementById('carrusel-next');
+      const dotsWrap   = document.getElementById('carrusel-dots');
+
+      if (!track) return;
+
+      const slides     = Array.from(track.querySelectorAll('.carrusel-slide'));
+      const total      = slides.length;
+
+      // Cuántos slides se ven según breakpoint
+      function perView() {
+        if (window.innerWidth >= 1024) return 4;
+        if (window.innerWidth >= 768)  return 3;
+        return 2;
+      }
+
+      let current = 0;
+
+      // Crear dots
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        const pages = Math.ceil(total / perView());
+        for (let i = 0; i < pages; i++) {
+          const d = document.createElement('button');
+          d.className = 'carrusel-dot' + (i === 0 ? ' active' : '');
+          d.setAttribute('aria-label', 'Página ' + (i + 1));
+          d.addEventListener('click', () => goTo(i * perView()));
+          dotsWrap.appendChild(d);
+        }
+      }
+
+      function updateDots() {
+        const dots  = dotsWrap.querySelectorAll('.carrusel-dot');
+        const page  = Math.floor(current / perView());
+        dots.forEach((d, i) => d.classList.toggle('active', i === page));
+      }
+
+      function goTo(index) {
+        const pv  = perView();
+        const max = total - pv;
+        current   = Math.max(0, Math.min(index, max));
+
+        const slideWidth = slides[0].offsetWidth + 16; // gap = 16px
+        track.style.transform = `translateX(-${current * slideWidth}px)`;
+
+        btnPrev.disabled = current === 0;
+        btnNext.disabled = current >= max;
+        updateDots();
+      }
+
+      btnPrev.addEventListener('click', () => goTo(current - perView()));
+      btnNext.addEventListener('click', () => goTo(current + perView()));
+
+      // Touch / drag
+      let startX = 0, isDragging = false, dragDelta = 0;
+
+      outer.addEventListener('mousedown',  e => { isDragging = true; startX = e.clientX; outer.style.cursor = 'grabbing'; });
+      outer.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+
+      outer.addEventListener('mousemove',  e => { if (!isDragging) return; dragDelta = e.clientX - startX; });
+      outer.addEventListener('touchmove',  e => { dragDelta = e.touches[0].clientX - startX; }, { passive: true });
+
+      function endDrag() {
+        if (!isDragging && dragDelta === 0) return;
+        isDragging = false;
+        outer.style.cursor = 'grab';
+        if (Math.abs(dragDelta) > 50) {
+          dragDelta < 0 ? goTo(current + perView()) : goTo(current - perView());
+        }
+        dragDelta = 0;
+      }
+
+      outer.addEventListener('mouseup',    endDrag);
+      outer.addEventListener('mouseleave', endDrag);
+      outer.addEventListener('touchend',   endDrag);
+
+      // Init + resize
+      function init() {
+        buildDots();
+        goTo(0);
+      }
+
+      init();
+      window.addEventListener('resize', () => { buildDots(); goTo(0); });
+    })();
   </script>
 
   <!-- Schema markup -->
