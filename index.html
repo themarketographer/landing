@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudio Graphica | Fotografía Gastronómica para Restaurantes en Cochabamba</title>
+  <meta name="description" content="Fotografía gastronómica profesional para restaurantes en Cochabamba. +400 restaurantes fotografiados. +10 años de experiencia. Agenda tu diagnóstico gratuito." />
+  <meta property="og:title" content="Estudio Graphica | Fotografía Gastronómica Cochabamba" />
+  <meta property="og:description" content="Fotografía gastronómica profesional para restaurantes en Cochabamba. Tus clientes comen primero con los ojos." />
+  <meta property="og:image" content="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509513/Open_Graph_ajvxef.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509520/logo_F_B_cx6pjx.jpg" />
+
+  <!-- META PIXEL: pega aquí tu código de Meta Pixel -->
+  <!-- GOOGLE TAG: pega aquí tu Google Tag -->
+  <!-- TIKTOK PIXEL: pega aquí tu TikTok Pixel -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       VARIABLES DE MARCA
+    ============================================= */
+    :root {
+      --amarillo: #ffdd5a;
+      --amarillo-hover: #f5d000;
+      --negro: #181818;
+      --blanco: #f8f8f8;
+      --gris-suave: #f0ede6;
+      --gris-texto: #6b6660;
+      --sombra: 0 8px 40px rgba(24,24,24,0.10);
+      --sombra-hover: 0 16px 60px rgba(24,24,24,0.18);
+      --radius: 18px;
+      --radius-sm: 10px;
+      --transicion: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* =============================================
+       RESET Y BASE
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--blanco);
+      color: var(--negro);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* =============================================
+       TIPOGRAFÍA
+    ============================================= */
+    h1, h2, h3, h4 {
+      font-family: 'Syne', sans-serif;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); font-weight: 800; }
+    h2 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; }
+
+    p { font-size: clamp(0.95rem, 1.8vw, 1.05rem); color: var(--gris-texto); line-height: 1.75; }
+
+    /* =============================================
+       UTILIDADES
+    ============================================= */
+    .container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: clamp(64px, 10vw, 120px) 0; }
+
+    .tag {
+      display: inline-block;
+      background: var(--amarillo);
+      color: var(--negro);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 16px 28px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transicion);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--amarillo);
+      color: var(--negro);
+    }
+    .btn-primary:hover {
+      background: var(--amarillo-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,221,90,0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--negro);
+      border: 2px solid var(--negro);
+    }
+    .btn-outline:hover {
+      background: var(--negro);
+      color: var(--blanco);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--blanco);
+      border: 2px solid rgba(248,248,248,0.5);
+    }
+    .btn-outline-white:hover {
+      background: var(--blanco);
+      color: var(--negro);
+      transform: translateY(-2px);
+    }
+
+    .microcopy {
+      font-size: 0.82rem;
+      color: var(--gris-texto);
+      margin-top: 10px;
+    }
+    .microcopy-light {
+      font-size: 0.82rem;
+      color: rgba(248,248,248,0.55);
+      margin-top: 10px;
+    }
+
+    /* =============================================
+       NAV
+    ============================================= */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 0;
+      transition: var(--transicion);
+    }
+    nav.scrolled {
+      background: rgba(248,248,248,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 12px 0;
+      box-shadow: 0 2px 20px rgba(24,24,24,0.08);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo img {
+      height: 38px;
+      width: auto;
+    }
+    .nav-cta {
+      font-size: 0.88rem;
+      padding: 12px 22px;
+    }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    #hero {
+      min-height: 100svh;
+      background: var(--gris-suave);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content { z-index: 2; }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+    .hero-eyebrow span:first-child {
+      width: 32px;
+      height: 2px;
+      background: var(--amarillo);
+      display: inline-block;
+    }
+    .hero-eyebrow p {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gris-texto);
+    }
+
+    .hero-headline { margin-bottom: 20px; }
+    .hero-headline em {
+      font-style: normal;
+      color: var(--amarillo);
+      -webkit-text-stroke: 1.5px var(--negro);
+      text-shadow: 3px 3px 0 var(--negro);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--negro);
+      font-weight: 400;
+      max-width: 480px;
+      margin-bottom: 36px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(24,24,24,0.10);
+    }
+    .stat-item { }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--negro);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--gris-texto);
+      margin-top: 4px;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+    .hero-image-main {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--sombra);
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+    .hero-badge {
+      position: absolute;
+      bottom: -20px;
+      left: -16px;
+      background: var(--negro);
+      color: var(--blanco);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      box-shadow: var(--sombra);
+      min-width: 160px;
+    }
+    .hero-badge-icon { font-size: 1.4rem; margin-bottom: 4px; }
+    .hero-badge-text {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--blanco);
+      line-height: 1.3;
+    }
+    .hero-badge-sub {
+      font-size: 0.72rem;
+      color: rgba(248,248,248,0.55);
+      margin-top: 2px;
+    }
+
+    /* Decorative blob */
+    .hero-blob {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255,221,90,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      top: -100px;
+      right: -100px;
+      pointer-events: none;
+    }
+
+    /* =============================================
+       PROBLEMA
+    ============================================= */
+    #problema { background: var(--negro); }
+
+    .problema-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    #problema h2 { color: var(--blanco); }
+    #problema .tag { background: rgba(255,221,90,0.15); color: var(--amarillo); }
+
+    .problema-lead {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      color: rgba(248,248,248,0.85);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      border-left: 3px solid var(--amarillo);
+      padding-left: 20px;
+    }
+
+    .problema-text { color: rgba(248,248,248,0.6); margin-bottom: 16px; }
+
+    .problema-puntos {
+      list-style: none;
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .problema-puntos li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      color: rgba(248,248,248,0.75);
+      font-size: 0.95rem;
+    }
+    .problema-puntos li::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      background: var(--amarillo);
+      border-radius: 50%;
+      margin-top: 7px;
+    }
+
+    .comparativa-card {
+      background: rgba(248,248,248,0.04);
+      border: 1px solid rgba(248,248,248,0.08);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .comparativa-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .comparativa-label.bad { color: rgba(248,248,248,0.35); }
+    .comparativa-label.good { color: var(--amarillo); }
+    .comparativa-imgs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .comparativa-imgs img {
+      border-radius: var(--radius-sm);
+      aspect-ratio: 1;
+      object-fit: cover;
+      width: 100%;
+    }
+    .comparativa-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--gris-texto);
+      text-transform: uppercase;
+      margin: 20px 0;
+      gap: 12px;
+    }
+    .comparativa-divider::before,
+    .comparativa-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(248,248,248,0.08);
+    }
+
+    /* =============================================
+       PROCESO
+    ============================================= */
+    #proceso { background: var(--blanco); }
+
+    .proceso-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .proceso-step {
+      background: var(--gris-suave);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      transition: var(--transicion);
+      border: 1px solid transparent;
+    }
+    .proceso-step:hover {
+      border-color: var(--amarillo);
+      box-shadow: var(--sombra-hover);
+      transform: translateY(-3px);
+    }
+    .step-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--amarillo);
+      line-height: 1;
+      min-width: 52px;
+    }
+    .step-content h3 { margin-bottom: 8px; color: var(--negro); }
+    .step-content p { font-size: 0.95rem; }
+
+    /* =============================================
+       PROMESA
+    ============================================= */
+    #promesa {
+      background: var(--amarillo);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #promesa h2 { color: var(--negro); }
+    #promesa .tag { background: var(--negro); color: var(--amarillo); }
+
+    .promesa-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .promesa-lead {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: rgba(24,24,24,0.85);
+      font-weight: 400;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .promesa-items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .promesa-item {
+      background: rgba(24,24,24,0.07);
+      border-radius: var(--radius-sm);
+      padding: 18px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .promesa-icon {
+      font-size: 1.4rem;
+      min-width: 36px;
+      text-align: center;
+    }
+    .promesa-item-text {
+      font-size: 0.95rem;
+      color: var(--negro);
+      font-weight: 500;
+    }
+
+    .plan-card {
+      background: var(--negro);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      color: var(--blanco);
+    }
+    .plan-card h3 {
+      color: var(--blanco);
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.85rem;
+      color: var(--amarillo);
+    }
+    .plan-card h2 {
+      color: var(--blanco);
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    .plan-meses {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .plan-mes {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 0.9rem;
+      color: rgba(248,248,248,0.75);
+    }
+    .plan-mes-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: rgba(255,221,90,0.15);
+      color: var(--amarillo);
+      padding: 3px 8px;
+      border-radius: 100px;
+      min-width: 46px;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    /* =============================================
+       PORTAFOLIO
+    ============================================= */
+    #portafolio { background: var(--negro); }
+    #portafolio h2 { color: var(--blanco); }
+    #portafolio .tag { background: rgba(255,221,90,0.15); color: var(--amarillo); }
+    #portafolio .section-sub { color: rgba(248,248,248,0.5); max-width: 500px; margin: 0 auto 48px; text-align: center; }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .portfolio-item {
+      position: relative;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .portfolio-item:first-child {
+      grid-column: span 2;
+    }
+    .portfolio-item img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .portfolio-item:first-child img {
+      aspect-ratio: 16/7;
+    }
+    .portfolio-item:hover img { transform: scale(1.06); }
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(24,24,24,0.7) 0%, transparent 60%);
+      opacity: 0;
+      transition: var(--transicion);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+    /* =============================================
+       SOBRE MÍ
+    ============================================= */
+    #sobre { background: var(--gris-suave); }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .sobre-img-wrap {
+      position: relative;
+    }
+    .sobre-img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: var(--radius);
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+    .sobre-badge {
+      position: absolute;
+      bottom: 20px;
+      right: -10px;
+      background: var(--amarillo);
+      color: var(--negro);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      box-shadow: var(--sombra);
+    }
+    .sobre-badge-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .sobre-badge-text {
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .sobre-content h2 { margin-bottom: 20px; }
+    .sobre-intro {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--negro);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      border-left: 3px solid var(--amarillo);
+      padding-left: 18px;
+    }
+    .sobre-bio { margin-bottom: 16px; }
+
+    .credenciales {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .cred-tag {
+      background: var(--blanco);
+      border: 1px solid rgba(24,24,24,0.12);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--negro);
+    }
+
+    /* =============================================
+       TESTIMONIOS
+    ============================================= */
+    #testimonios { background: var(--blanco); }
+    .testimonios-header { text-align: center; margin-bottom: 48px; }
+
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .testimonio-img {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      object-fit: contain;
+      background: var(--gris-suave);
+      transition: var(--transicion);
+    }
+    .testimonio-img:hover {
+      transform: scale(1.02);
+      box-shadow: var(--sombra);
+    }
+
+    /* =============================================
+       CTA FINAL
+    ============================================= */
+    #cta-final {
+      background: var(--negro);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-blob {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,221,90,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      bottom: -200px;
+      right: -100px;
+      pointer-events: none;
+    }
+    .cta-inner {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    #cta-final h2 { color: var(--blanco); margin-bottom: 16px; }
+    #cta-final p { color: rgba(248,248,248,0.6); margin-bottom: 36px; font-size: 1.05rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-actions { display: flex; flex-direction: column; gap: 14px; align-items: center; }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--negro);
+      border-top: 1px solid rgba(248,248,248,0.06);
+      padding: 32px 0;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+    }
+    .footer-logo img { height: 32px; width: auto; opacity: 0.7; }
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+    .footer-social a {
+      color: rgba(248,248,248,0.45);
+      font-size: 0.82rem;
+      text-decoration: none;
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: var(--transicion);
+    }
+    .footer-social a:hover { color: var(--amarillo); }
+    .footer-legal {
+      font-size: 0.75rem;
+      color: rgba(248,248,248,0.25);
+    }
+
+    /* =============================================
+       ANIMACIONES DE ENTRADA
+    ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* =============================================
+       SECTION HEADER CENTRADO
+    ============================================= */
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-header-center p {
+      max-width: 520px;
+      margin: 16px auto 0;
+    }
+
+    /* =============================================
+       RESPONSIVE — DESKTOP
+    ============================================= */
+    @media (min-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        min-height: 100svh;
+      }
+      .hero-actions { flex-direction: row; }
+      .problema-grid { grid-template-columns: 1fr 1fr; }
+      .proceso-grid { grid-template-columns: 1fr 1fr; }
+      .promesa-grid { grid-template-columns: 1fr 1fr; }
+      .sobre-grid { grid-template-columns: auto 1fr; }
+      .sobre-img { max-width: 340px; }
+      .testimonios-grid { grid-template-columns: repeat(2, 1fr); }
+      .cta-actions { flex-direction: row; justify-content: center; }
+      .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
+      .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+      .portfolio-item:first-child { grid-column: span 2; }
+    }
+
+    @media (min-width: 1024px) {
+      .testimonios-grid { grid-template-columns: repeat(4, 1fr); }
+      .proceso-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       NAV
+  ============================================= -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509513/Logo_B_S_F_kdolev.png" alt="Estudio Graphica" />
+      </a>
+      <a href="#cta-final" class="btn btn-primary nav-cta">Agenda tu diagnóstico</a>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO
+  ============================================= -->
+  <section id="hero">
+    <div class="hero-blob"></div>
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-eyebrow reveal">
+            <span></span>
+            <p>Fotografía gastronómica · Cochabamba</p>
+          </div>
+
+          <h1 class="hero-headline reveal reveal-delay-1">
+            La primera<br />
+            <em>mordida</em><br />
+            siempre<br />
+            es visual.
+          </h1>
+
+          <p class="hero-sub reveal reveal-delay-2">
+            Cochabamba es una ciudad repleta de restaurantes. ¿De verdad quieres resaltar con fotos hechas con una IA?
+          </p>
+
+          <div class="hero-actions reveal reveal-delay-3">
+            <a href="#cta-final" class="btn btn-primary">
+              Agenda tu diagnóstico gratuito →
+            </a>
+            <a href="#portafolio" class="btn btn-outline">
+              Ver portafolio
+            </a>
+          </div>
+          <p class="microcopy reveal reveal-delay-4">Sin compromiso. Respondo en menos de 24h.</p>
+
+          <div class="hero-stats reveal reveal-delay-4">
+            <div class="stat-item">
+              <div class="stat-num">+400</div>
+              <div class="stat-label">restaurantes fotografiados</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">+10</div>
+              <div class="stat-label">años en Cochabamba</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap reveal reveal-delay-2">
+          <img
+            class="hero-image-main"
+            src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509515/Portada_p9ijpa.jpg"
+            alt="Fotografía gastronómica profesional - Estudio Graphica"
+          />
+          <div class="hero-badge">
+            <div class="hero-badge-icon">📸</div>
+            <div class="hero-badge-text">Sesión + entrega<br />en 24 horas</div>
+            <div class="hero-badge-sub">Con foodstyling incluido</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROBLEMA
+  ============================================= -->
+  <section id="problema" class="section">
+    <div class="container">
+      <div class="problema-grid">
+
+        <div>
+          <span class="tag reveal">El problema real</span>
+          <h2 class="reveal reveal-delay-1">Tu comida sabe mejor de lo que se ve.</h2>
+          <p class="problema-lead reveal reveal-delay-2">
+            "La gente come primero con los ojos." Y si lo que ven primero es una foto celulerar o generada por IA, ya perdiste antes de que lean el menú.
+          </p>
+          <p class="problema-text reveal reveal-delay-3">
+            Un restaurante con fotos mediocres no antoja lo suficiente para que un cliente tome la decisión de elegirte sin pensarlo dos veces. El precio siempre va a parecer caro cuando la imagen no lo justifica.
+          </p>
+          <ul class="problema-puntos reveal reveal-delay-4">
+            <li>Clientes que te buscan pero eligen la "opción segura" que ya conocen.</li>
+            <li>Fotos que no funcionan ni en menú, ni en delivery, ni en anuncios.</li>
+            <li>Inversión en redes sociales que no convierte porque el contenido no conecta.</li>
+          </ul>
+        </div>
+
+        <div class="comparativa-card reveal reveal-delay-2">
+          <p class="comparativa-label bad">📱 Celular o IA</p>
+          <img
+            src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509529/Happy_Fry_pvyr8x.png"
+            alt="Comparativa antes"
+            style="border-radius: var(--radius-sm); margin-bottom: 6px; opacity: 0.5; filter: grayscale(0.4);"
+          />
+          <div class="comparativa-divider">vs</div>
+          <p class="comparativa-label good">🏆 Estudio Graphica</p>
+          <img
+            src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509532/Bros_zehqtz.png"
+            alt="Fotografía profesional Estudio Graphica"
+            style="border-radius: var(--radius-sm);"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROCESO
+  ============================================= -->
+  <section id="proceso" class="section">
+    <div class="container">
+      <div class="section-header-center reveal">
+        <span class="tag">Cómo trabajamos</span>
+        <h2>Simple. Sin sorpresas.<br />Con resultados.</h2>
+        <p>Sesiones de fotos a precio por foto con foodstyling, o plan mensual de contenido. Tú eliges.</p>
+      </div>
+
+      <div class="proceso-grid">
+        <div class="proceso-step reveal reveal-delay-1">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Diagnóstico gratuito</h3>
+            <p>Agendamos una llamada y hacemos una auditoría de tu marca. Sin costo, sin compromiso. Entendemos exactamente qué necesita tu negocio.</p>
+          </div>
+        </div>
+        <div class="proceso-step reveal reveal-delay-2">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Sesión fotográfica</h3>
+            <p>Firmamos contrato, hacemos las fotos con foodstyling incluido. Tú eliges las imágenes que más te gusten del set completo.</p>
+          </div>
+        </div>
+        <div class="proceso-step reveal reveal-delay-3">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Entrega en 24 horas</h3>
+            <p>Fotos retocadas y listas para usar en menú digital, redes sociales, delivery, anuncios y catálogo de WhatsApp. Sin esperar semanas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROMESA
+  ============================================= -->
+  <section id="promesa" class="section">
+    <div class="container">
+      <div class="promesa-grid">
+
+        <div>
+          <span class="tag reveal">Nuestra promesa</span>
+          <h2 class="reveal reveal-delay-1">Presencia en cada lugar donde te buscan.</h2>
+          <p class="promesa-lead reveal reveal-delay-2">
+            Fotos que funcionan en todos los formatos: el objetivo es que tu comida se vea bien donde sea que aparezca.
+          </p>
+          <div class="promesa-items reveal reveal-delay-3">
+            <div class="promesa-item">
+              <span class="promesa-icon">🍽️</span>
+              <span class="promesa-item-text">Menú digital y físico</span>
+            </div>
+            <div class="promesa-item">
+              <span class="promesa-icon">📱</span>
+              <span class="promesa-item-text">Feed de redes sociales</span>
+            </div>
+            <div class="promesa-item">
+              <span class="promesa-icon">🛵</span>
+              <span class="promesa-item-text">Apps de delivery</span>
+            </div>
+            <div class="promesa-item">
+              <span class="promesa-icon">📣</span>
+              <span class="promesa-item-text">Anuncios de pago</span>
+            </div>
+            <div class="promesa-item">
+              <span class="promesa-icon">💬</span>
+              <span class="promesa-item-text">Catálogo de WhatsApp</span>
+            </div>
+            <div class="promesa-item">
+              <span class="promesa-icon">⭕</span>
+              <span class="promesa-item-text">Stories de Instagram</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="plan-card reveal reveal-delay-2">
+          <h3>Plan mensual</h3>
+          <h2>6 meses de contenido estratégico</h2>
+          <div class="plan-meses">
+            <div class="plan-mes"><span class="plan-mes-num">Mes #1</span>Menú digital</div>
+            <div class="plan-mes"><span class="plan-mes-num">Mes #2</span>Feed de redes sociales</div>
+            <div class="plan-mes"><span class="plan-mes-num">Mes #3</span>Apps de delivery</div>
+            <div class="plan-mes"><span class="plan-mes-num">Mes #4</span>Anuncios</div>
+            <div class="plan-mes"><span class="plan-mes-num">Mes #5</span>Catálogo de WhatsApp</div>
+            <div class="plan-mes"><span class="plan-mes-num">Mes #6</span>Stories de Instagram</div>
+          </div>
+          <p style="color: rgba(248,248,248,0.55); font-size: 0.85rem; margin-bottom: 20px;">Incluye foodstyling, estrategia de anuncios, programación de contenido y más.</p>
+          <a href="#cta-final" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            Quiero este plan →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PORTAFOLIO
+  ============================================= -->
+  <section id="portafolio" class="section">
+    <div class="container">
+      <div class="section-header-center reveal">
+        <span class="tag">Portafolio</span>
+        <h2>El trabajo habla solo.</h2>
+        <p class="section-sub">Cada restaurante tiene una historia que contar. Esto es lo que pasa cuando esa historia se cuenta bien.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item reveal">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509533/Chanchi_Broaster_yjkv9z.png" alt="Chanchi Broaster - Fotografía gastronómica" />
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-1">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509532/Bros_zehqtz.png" alt="Bros - Fotografía gastronómica" />
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-2">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509531/Cookie_Bar_u4dvow.png" alt="Cookie Bar" />
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-1">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509530/Vitz_mowogx.png" alt="Vitz" />
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-2">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509530/Mama_Chicken_ljrocy.png" alt="Mama Chicken" />
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-3">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509530/Happy_Tea_tz44zb.png" alt="Happy Tea" />
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-1">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509529/Happy_Fry_pvyr8x.png" alt="Happy Fry" />
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-2">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509526/Sansei_nycyio.png" alt="Sansei" />
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-3">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509521/El_Ed%C3%A9n_m5murs.png" alt="El Edén" />
+          <div class="portfolio-overlay"></div>
+        </div>
+        <div class="portfolio-item reveal reveal-delay-4">
+          <img loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509523/Globos_z3tzcj.png" alt="Globos" />
+          <div class="portfolio-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SOBRE MÍ
+  ============================================= -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="sobre-grid">
+
+        <div class="sobre-img-wrap reveal">
+          <img
+            class="sobre-img"
+            src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509526/Pablo_Villarroel_elpzzq.jpg"
+            alt="Pablo Villarroel - The Marketographer"
+            loading="lazy"
+          />
+          <div class="sobre-badge">
+            <div class="sobre-badge-num">TEDx</div>
+            <div class="sobre-badge-text">Speaker</div>
+          </div>
+        </div>
+
+        <div class="sobre-content">
+          <span class="tag reveal">Quién está detrás</span>
+          <h2 class="reveal reveal-delay-1">Pablo Villarroel</h2>
+          <p class="sobre-intro reveal reveal-delay-2">
+            En todas las páginas siempre hay un bloque enorme de texto donde el fotógrafo presume de sus títulos o años de experiencia, pero nadie lo lee. ¿Sabes por qué? Porque a nadie le importa.
+          </p>
+          <p class="sobre-bio reveal reveal-delay-3">
+            Tú quieres resultados para tu marca. Mi mejor carta de presentación es mi portafolio, porque eso es exactamente lo que te puedo ofrecer: fotos que venden, estrategia que funciona, y un sistema de contenido que puedes manejar tú mismo sin depender de una agencia que entrega lo mismo a todos sus clientes.
+          </p>
+          <div class="credenciales reveal reveal-delay-4">
+            <span class="cred-tag">Lic. Marketing & Publicidad</span>
+            <span class="cred-tag">TEDx Speaker</span>
+            <span class="cred-tag">Especialista en Storytelling</span>
+            <span class="cred-tag">+10 años fotografía gastronómica</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIOS
+  ============================================= -->
+  <section id="testimonios" class="section">
+    <div class="container">
+      <div class="testimonios-header section-header-center reveal">
+        <span class="tag">Prueba social</span>
+        <h2>Lo que dicen<br />+400 restaurantes.</h2>
+        <p>Capturas reales. Nada editado.</p>
+      </div>
+
+      <div class="testimonios-grid">
+        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509854/2_fpl2ri.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509855/4_xeo1ac.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509855/3_zrfskk.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-3" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509856/5_yo0h4n.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509858/7_a2yqw1.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509859/9_vxszev.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509861/11_a4b8sj.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-3" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509865/13_hgbv8n.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509866/14_gkhz75.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509867/16_mtfc7n.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509870/18_k2yuja.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-3" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509870/19_mql9b0.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509872/21_omnfow.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509871/20_d5tb3d.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509874/23_tzfxgj.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-3" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509873/22_mjeqlm.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509874/24_aey5ma.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-1" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509860/10_geviq3.png" alt="Testimonio cliente" />
+        <img class="testimonio-img reveal reveal-delay-2" loading="lazy" src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509854/1_kigem6.png" alt="Testimonio cliente" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA FINAL
+  ============================================= -->
+  <section id="cta-final" class="section">
+    <div class="cta-blob"></div>
+    <div class="container">
+      <div class="cta-inner">
+        <span class="tag reveal" style="background: rgba(255,221,90,0.15); color: var(--amarillo);">Próximos pasos</span>
+        <h2 class="reveal reveal-delay-1">¿Tu restaurante merece<br />mejor imagen?</h2>
+        <p class="reveal reveal-delay-2">
+          Agenda un diagnóstico gratuito de tu marca. Analizamos tu situación actual y te decimos exactamente qué necesitas — sin venderte nada que no tenga sentido para tu negocio.
+        </p>
+        <div class="cta-actions reveal reveal-delay-3">
+          <a href="https://wa.me/59170000000?text=Hola%20Pablo,%20quiero%20agendar%20un%20diagn%C3%B3stico%20gratuito%20para%20mi%20restaurante" class="btn btn-primary" target="_blank" rel="noopener">
+            Agenda tu diagnóstico gratuito →
+          </a>
+        </div>
+        <p class="microcopy-light reveal reveal-delay-4">Sin compromiso. Respondo en menos de 24h.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+  ============================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="https://res.cloudinary.com/dplhu2z6j/image/upload/v1777509513/Logo_B_S_F_kdolev.png" alt="Estudio Graphica" />
+        </div>
+        <div class="footer-social">
+          <a href="https://tiktok.com/@themarkertographer" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://instagram.com/estudiographica" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <p class="footer-legal">© 2025 Estudio Graphica · Cochabamba, Bolivia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JAVASCRIPT
+  ============================================= -->
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Trigger hero reveals immediately
+    setTimeout(() => {
+      document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('visible'));
+    }, 100);
+
+    // Nav scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+
+  <!-- Schema markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Estudio Graphica",
+    "description": "Fotografía gastronómica para restaurantes en Cochabamba",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cochabamba",
+      "addressCountry": "BO"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Pablo Villarroel",
+      "jobTitle": "Fotógrafo gastronómico y TEDx Speaker"
+    }
+  }
+  </script>
+
+</body>
+</html>
